@@ -5,62 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Janete • Grupo J. Schavetock</title>
   <style>
-    :root{
-      --bg:#f5f6f8;
-      --card:#ffffff;
-      --text:#1d1d1f;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-      --accent:#2a2a2d;
-      --user:#2b2c30;
-      --assistant:#f3f4f6;
-      --danger:#fee2e2;
-      --danger-text:#991b1b;
-      --shadow:0 12px 28px rgba(15,23,42,.07);
+    :root {
+      --text:#1d1d1f; --muted:#6b7280; --line:#e5e7eb; --accent:#2a2a2d;
+      --orange:#f97316; --orange-dark:#c2410c; --assistant:#f3f4f6;
+      --danger:#fee2e2; --danger-text:#991b1b; --shadow:0 12px 28px rgba(15,23,42,.07);
       --radius:22px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:linear-gradient(180deg,#f7f7f8 0%,#f1f3f5 100%);
-      color:var(--text);
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg,#fff7ed 0%,#f7f7f8 36%,#f1f3f5 100%); color:var(--text);
     }
-    .page{max-width:1120px;margin:0 auto;padding:28px 20px;}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
-    .header{background:linear-gradient(135deg,#1f2023 0%,#2f3136 100%);color:#fff;padding:28px 28px 22px;}
-    .brand{display:flex;align-items:center;gap:18px;margin-bottom:14px;}
-    .brand img{height:82px;width:auto;object-fit:contain;border-radius:12px;background:rgba(255,255,255,.98);padding:10px 14px;}
-    .brand-text small{display:block;color:rgba(255,255,255,.72);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
-    .brand-text h1{margin:0;font-size:30px;line-height:1.1;}
-    .header p{margin:0;color:rgba(255,255,255,.84);font-size:14px;line-height:1.65;max-width:780px;}
-    .content{padding:22px;display:grid;gap:18px;}
-    .chip{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid #bbf7d0;background:#dcfce7;color:#166534;}
-    .chat-box{border:1px solid var(--line);border-radius:20px;background:#fff;height:500px;overflow:auto;padding:16px;}
-    .empty{border:1px dashed var(--line);border-radius:18px;padding:34px 18px;text-align:center;color:var(--muted);font-size:14px;line-height:1.6;}
-    .message-wrap{display:flex;margin-bottom:14px}
-    .message-wrap.user{justify-content:flex-end}
-    .bubble{max-width:86%;border-radius:18px;padding:14px 16px;box-shadow:var(--shadow);line-height:1.7;white-space:pre-wrap;word-wrap:break-word;font-size:14px;}
-    .bubble.user{background:var(--user);color:#fff;}
-    .bubble.assistant{background:var(--assistant);color:var(--text);}
-    .meta{display:flex;align-items:center;gap:8px;font-size:12px;opacity:.82;margin-bottom:8px;font-weight:700;}
-    .danger{border:1px solid #fecaca;background:var(--danger);color:var(--danger-text);border-radius:16px;padding:12px 14px;font-size:14px;line-height:1.5;display:none;}
-    .composer{border:1px solid var(--line);background:#fff;border-radius:20px;padding:14px;}
-    .label{display:block;font-size:13px;font-weight:700;margin-bottom:8px;}
-    textarea{width:100%;border:1px solid var(--line);border-radius:16px;padding:12px 14px;font:inherit;color:var(--text);background:#fff;outline:none;min-height:130px;resize:vertical;line-height:1.6;}
-    textarea:focus{border-color:#cfd4dc;box-shadow:0 0 0 4px rgba(31,32,35,.06);}
-    .composer-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;}
-    .small{color:var(--muted);font-size:12px;}
-    button{border:0;border-radius:16px;padding:12px 18px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;font:inherit;transition:.18s ease;white-space:nowrap;}
-    button:hover{transform:translateY(-1px)}
-    button.secondary{background:#fff;color:var(--text);border:1px solid var(--line);}
-    button:disabled{opacity:.55;cursor:not-allowed;transform:none}
-    .top-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
-    @media (max-width: 900px){
-      .chat-box{height:400px}
-      .composer-foot{flex-direction:column;align-items:flex-start}
-      .brand{align-items:flex-start; flex-direction:column}
-      .brand img{height:72px}
+    .page { max-width:1120px; margin:0 auto; padding:28px 20px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+    .header { background:linear-gradient(135deg,#1f2023 0%,#2f3136 55%,#b45309 140%); color:#fff; padding:28px 28px 22px; }
+    .brand { display:flex; align-items:center; gap:18px; margin-bottom:14px; }
+    .brand img { height:82px; width:auto; max-width:230px; object-fit:contain; border-radius:12px; background:rgba(255,255,255,.98); padding:10px 14px; }
+    .brand-text small { display:block; color:rgba(255,255,255,.72); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:6px; }
+    .brand-text h1 { margin:0; font-size:30px; line-height:1.1; }
+    .header p { margin:0; color:rgba(255,255,255,.84); font-size:14px; line-height:1.65; max-width:780px; }
+    .content { padding:22px; display:grid; gap:18px; }
+    .top-row { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .chip { display:inline-flex; align-items:center; padding:7px 12px; border-radius:999px; font-size:12px; font-weight:700; border:1px solid #bbf7d0; background:#dcfce7; color:#166534; }
+    .chat-box { border:1px solid var(--line); border-radius:20px; background:#fff; height:500px; overflow:auto; padding:16px; }
+    .empty { border:1px dashed var(--line); border-radius:18px; padding:34px 18px; text-align:center; color:var(--muted); font-size:14px; line-height:1.6; }
+    .message-wrap { display:flex; margin-bottom:14px; }
+    .message-wrap.user { justify-content:flex-end; }
+    .bubble { max-width:86%; border-radius:18px; padding:14px 16px; box-shadow:var(--shadow); line-height:1.7; white-space:pre-wrap; word-wrap:break-word; font-size:14px; }
+    .bubble.user { background:#2b2c30; color:#fff; }
+    .bubble.assistant { background:var(--assistant); color:var(--text); }
+    .meta { display:flex; align-items:center; gap:8px; font-size:12px; opacity:.82; margin-bottom:8px; font-weight:700; }
+    .danger { border:1px solid #fecaca; background:var(--danger); color:var(--danger-text); border-radius:16px; padding:12px 14px; font-size:14px; line-height:1.5; display:none; }
+    .composer { border:1px solid var(--line); background:#fff; border-radius:20px; padding:14px; }
+    .label { display:block; font-size:13px; font-weight:700; margin-bottom:8px; }
+    textarea { width:100%; border:1px solid var(--line); border-radius:16px; padding:12px 14px; font:inherit; color:var(--text); background:#fff; outline:none; min-height:130px; resize:vertical; line-height:1.6; }
+    textarea:focus { border-color:#cfd4dc; box-shadow:0 0 0 4px rgba(249,115,22,.10); }
+    .image-upload { margin-top:12px; border:1px dashed #fed7aa; background:#fff7ed; border-radius:16px; padding:12px; display:grid; gap:10px; }
+    .image-upload-top { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .image-upload-title { font-size:13px; font-weight:800; color:#9a3412; margin-bottom:4px; }
+    .image-upload-help { font-size:12px; color:#7c2d12; line-height:1.45; }
+    input[type="file"] { font:inherit; font-size:13px; color:var(--muted); max-width:100%; }
+    .preview { display:none; align-items:center; gap:12px; background:#fff; border:1px solid var(--line); border-radius:14px; padding:10px; }
+    .preview img { width:54px; height:54px; object-fit:cover; border-radius:12px; border:1px solid var(--line); }
+    .preview-text { font-size:12px; color:var(--muted); line-height:1.4; flex:1; word-break:break-word; }
+    .composer-foot { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:12px; }
+    .small { color:var(--muted); font-size:12px; }
+    button { border:0; border-radius:16px; padding:12px 18px; background:var(--accent); color:#fff; font-weight:700; cursor:pointer; font:inherit; transition:.18s ease; white-space:nowrap; }
+    button:hover { transform:translateY(-1px); }
+    button.secondary { background:#fff; color:var(--text); border:1px solid var(--line); }
+    button.orange { background:linear-gradient(135deg,var(--orange),var(--orange-dark)); }
+    button:disabled { opacity:.55; cursor:not-allowed; transform:none; }
+    @media (max-width:900px) {
+      .chat-box { height:400px; }
+      .composer-foot { flex-direction:column; align-items:flex-start; }
+      .brand { align-items:flex-start; flex-direction:column; }
+      .brand img { height:72px; }
+      .composer-foot button { width:100%; }
     }
   </style>
 </head>
@@ -75,7 +75,7 @@
             <h1>Janete • Consultora Técnica da Rede</h1>
           </div>
         </div>
-        <p>Canal interno para apoio rápido em dúvidas sobre lentes, tratamentos, armações, argumentos de venda e condução de atendimento.</p>
+        <p>Canal interno para apoio rápido em dúvidas sobre lentes, tratamentos, armações, argumentos de venda, condução de atendimento e análise de imagens.</p>
       </div>
 
       <div class="content">
@@ -87,16 +87,33 @@
         <div id="errorBox" class="danger"></div>
 
         <div id="chatBox" class="chat-box">
-          <div id="emptyState" class="empty">Digite uma pergunta para começar o atendimento assistido.</div>
+          <div id="emptyState" class="empty">Digite uma pergunta para começar. Se quiser, anexe uma imagem junto.</div>
           <div id="messages"></div>
         </div>
 
         <div class="composer">
           <label class="label">Sua pergunta</label>
           <textarea id="questionInput" placeholder="Digite aqui a dúvida da equipe..."></textarea>
+
+          <div class="image-upload">
+            <div class="image-upload-top">
+              <div>
+                <div class="image-upload-title">Imagem opcional</div>
+                <div class="image-upload-help">Envie print, tabela, catálogo, arte, produto ou material técnico junto com a pergunta.</div>
+              </div>
+              <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+            </div>
+
+            <div id="previewBox" class="preview">
+              <img id="previewImg" alt="Prévia da imagem" />
+              <div id="previewText" class="preview-text"></div>
+              <button id="removeImageBtn" type="button" class="secondary">Remover</button>
+            </div>
+          </div>
+
           <div class="composer-foot">
-            <div class="small">Atalho: Ctrl + Enter para enviar</div>
-            <button id="sendBtn">Consultar Janete</button>
+            <div class="small">Atalho: Ctrl + Enter para enviar • Imagem até 5MB</div>
+            <button id="sendBtn" class="orange">Consultar Janete</button>
           </div>
         </div>
       </div>
@@ -106,6 +123,11 @@
   <script>
     const WEBHOOK_URL = "https://marketingsucess.app.n8n.cloud/webhook/agente-otica-v2";
     const questionInput = document.getElementById('questionInput');
+    const imageInput = document.getElementById('imageInput');
+    const previewBox = document.getElementById('previewBox');
+    const previewImg = document.getElementById('previewImg');
+    const previewText = document.getElementById('previewText');
+    const removeImageBtn = document.getElementById('removeImageBtn');
     const sendBtn = document.getElementById('sendBtn');
     const clearConversationBtn = document.getElementById('clearConversationBtn');
     const messagesWrap = document.getElementById('messages');
@@ -215,30 +237,100 @@
       setMessages(messages);
     }
 
+    function convertImageToBase64(file) {
+      return new Promise((resolve, reject) => {
+        if (!file) {
+          resolve(null);
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = () => {
+          const result = reader.result;
+          const parts = String(result).split(',');
+          const metadata = parts[0];
+          const base64 = parts[1];
+          const mediaTypeMatch = metadata.match(/data:(.*);base64/);
+          const mediaType = mediaTypeMatch ? mediaTypeMatch[1] : file.type;
+
+          resolve({
+            image_base64: base64,
+            image_media_type: mediaType,
+            image_name: file.name
+          });
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function updatePreview() {
+      const file = imageInput.files[0];
+
+      if (!file) {
+        previewBox.style.display = 'none';
+        previewImg.removeAttribute('src');
+        previewText.textContent = '';
+        return;
+      }
+
+      if (file.size > 5 * 1024 * 1024) {
+        alert('A imagem está muito pesada. Envie uma imagem de até 5MB.');
+        imageInput.value = '';
+        updatePreview();
+        return;
+      }
+
+      previewImg.src = URL.createObjectURL(file);
+      previewText.textContent = `${file.name} • ${Math.round(file.size / 1024)} KB`;
+      previewBox.style.display = 'flex';
+    }
+
     async function ask() {
       const question = questionInput.value.trim();
+      const imageFile = imageInput.files[0];
       const sessionId = getSessionId();
 
       if (!question) return;
 
+      if (imageFile && imageFile.size > 5 * 1024 * 1024) {
+        alert('A imagem está muito pesada. Envie uma imagem de até 5MB.');
+        return;
+      }
+
       hideError();
-      addMessage('user', question);
+
+      const userVisibleText = imageFile ? `${question}\n\n[Imagem anexada: ${imageFile.name}]` : question;
+      addMessage('user', userVisibleText);
       questionInput.value = '';
       sendBtn.disabled = true;
       sendBtn.textContent = 'Consultando...';
 
       try {
+        const imageData = await convertImageToBase64(imageFile);
+
+        const payload = {
+          pergunta: question,
+          message: question,
+          query: question,
+          chatInput: question,
+          session_id: sessionId,
+          origem: 'web'
+        };
+
+        if (imageData) {
+          payload.image_base64 = imageData.image_base64;
+          payload.image_media_type = imageData.image_media_type;
+          payload.image_name = imageData.image_name;
+          payload.tem_imagem = true;
+        } else {
+          payload.tem_imagem = false;
+        }
+
         const response = await fetch(WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            pergunta: question,
-            message: question,
-            query: question,
-            chatInput: question,
-            session_id: sessionId,
-            origem: 'web'
-          })
+          body: JSON.stringify(payload)
         });
 
         if (!response.ok) {
@@ -248,6 +340,9 @@
         const data = await response.json();
         const answer = normalizeText(data?.resposta || data?.answer || data?.output || data?.text || 'Sem resposta.');
         addMessage('assistant', answer);
+
+        imageInput.value = '';
+        updatePreview();
       } catch (error) {
         showError(`Não foi possível falar com a Janete. Detalhe: ${error.message || 'erro desconhecido'}`);
       } finally {
@@ -260,6 +355,13 @@
       localStorage.removeItem(STORAGE.messages);
       renderMessages([]);
       hideError();
+    });
+
+    imageInput.addEventListener('change', updatePreview);
+
+    removeImageBtn.addEventListener('click', () => {
+      imageInput.value = '';
+      updatePreview();
     });
 
     questionInput.addEventListener('keydown', (e) => {
